@@ -24,12 +24,14 @@ session_start(); // Declare before writing any html
 
 <?php
 
-if(isset($_POST["username"]) && isset($_POST["password"])){
+if(isset($_POST["username"]) && isset($_POST["password"]) && !empty($_POST['username']) && !empty($_POST['password'])){
     $_SESSION["username"] = $_POST["username"];
     $_SESSION["password"] = $_POST["password"];
 
     header("Location: home.php"); // redirect to home page
 
+}else{
+    echo "Fill all";
 }
 
 ?>
