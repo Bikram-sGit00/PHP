@@ -56,7 +56,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Registration form</title>
 
-  <!-- Figtree font; the CSS falls back to system fonts if it doesn't load -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -83,8 +82,6 @@
       <input type="email" id="email" name="email" autocomplete="email">
       <p class="error" id="email-error"></p>
     </div>
-
-    <!-- Phone and date of birth sit side by side on wider screens -->
     <div class="row">
       <div class="field">
         <label for="phone">Phone</label>
@@ -99,7 +96,6 @@
       </div>
     </div>
 
-    <!-- Radio buttons styled as pills; each input sits right before its label so CSS can style the checked one -->
     <fieldset class="field">
       <legend>Gender</legend>
       <div class="pills">

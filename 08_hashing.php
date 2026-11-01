@@ -16,6 +16,4 @@ if(password_verify("pizza123", $hashed_password)){ // user entered password is "
     echo "<br> Password is incorrect";
 }
 
-
-
 ?>
