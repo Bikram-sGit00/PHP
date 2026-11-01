@@ -27,3 +27,20 @@ foreach($_SERVER as $key => $value){  // will show all the server variables in t
     </form>
 </body>
 </html>
+
+
+
+<!-- 2. Use of REQUEST_METHOD: It holds the HTTP method used to access the page, such as GET or POST. -->
+
+<?php
+
+// if(isset($_POST["submit"])){
+//     echo " Submitted";
+// }  // problem with this is that we can also submit without clicking the submit button
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    echo " Submitted";
+}
+
+
+?>
