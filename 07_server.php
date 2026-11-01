@@ -20,8 +20,9 @@ foreach($_SERVER as $key => $value){  // will show all the server variables in t
 </head>
 <body>
     <!-- <form action = "07_server.php" method="POST"> , so instead of this, we can write like below -->
-    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-        <input type="text" name="name" placeholder="Enter your name">
+    <!-- <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST"> -->
+    <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"> <!--to avoid any cross site scripting attack, we can use htmlspecialchars() function to convert--> 
+        <input type="text" name="name" placeholder="Enter your name">             <!--special characters to HTML entities, so that they are not executed as code. -->
         <input type="submit" value="Submit">
     </form>
 </body>
