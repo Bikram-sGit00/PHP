@@ -7,6 +7,10 @@ $sql = "SELECT * FROM details WHERE name ='Bikram'";
 // $sql = "SELECT * FROM details WHERE name ='bikram'"; can also be this, will give same result.
 
 
+// To avoid that 
+// SELECT * FROM details
+// WHERE BINARY name = 'Bikram';
+
 $result = mysqli_query($con, $sql);
 
 if(mysqli_num_rows($result) > 0){ // (mysqli_num_rows(), this functions returns how many rows are there in the result set
