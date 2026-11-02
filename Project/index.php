@@ -12,7 +12,11 @@
         $password = "";
 
         // Connect to the reg_from database
-        $con = mysqli_connect($server, $username, $password, "reg_from");
+        try{
+            $con = mysqli_connect($server, $username, $password, "reg_from");
+        } catch (mysqli_sql_exception ) {
+            echo "Connection failed: " . mysqli_connect_error();
+        }
 
         if(!$con){
             die("Connection failed: " . mysqli_connect_error());
